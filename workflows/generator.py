@@ -7,6 +7,7 @@ Created on Oct 6, 2016
 import numpy as np
 import networkx as nx
 import random
+import string
 
 def workflow(previous_workflows_union, workflow_size,
              nb_previous_actions, total_nb_actions, conf):
@@ -212,6 +213,9 @@ def history(actions_metadata, conf):
     
     return workflows
 
+def id_generator(size = 10, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
+
 def actions(conf):
     '''
     Generates a list tuples that contain the action id and the metadata.
@@ -227,6 +231,7 @@ def actions(conf):
     for i in range(nb_actions):
         action_size = abs(np.random.normal(action_size_mean, action_size_std))
         action_time = abs(np.random.normal(action_time_mean, action_time_std))
-        actions.append((i, action_size, action_time))
+        action_unique = id_generator()
+        actions.append((i, action_size, action_time, action_unique))
         
     return actions
