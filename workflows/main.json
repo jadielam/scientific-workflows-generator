@@ -1,0 +1,29 @@
+{
+
+	"nb_actions": 80,
+	"action_size": {
+		"mean": 400,
+		"std": 200
+		},
+	"action_time": {
+		"mean": 300, 
+		"std": 200
+	},
+	"workflow_size": {
+		"mean": 10,
+		"std": 4
+	},
+	"previous_actions": {
+		"mean": 0.2,
+		"std": 0.1
+	},
+	"nb_children": {
+		"mean": 2.1,
+		"std": 1
+	},
+	"nb_parent": {
+		"mean": 2.1,
+		"std": 1
+	}
+}
+		
