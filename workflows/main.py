@@ -30,9 +30,9 @@ def create_json_entry(workflow, actions_metadata,
         action['forceComputation'] = False
         action['parentActions'] = workflow.predecessors(action_id)
         action['additionalInput'] = [
-            { "key": "sizeInMB", "value": actions_metadata[action_id][1]}, 
-            { "key": "timeInSeconds", "value": actions_metadata[action_id][2] },
-            { "key": "uniqueRandomInput", "value": actions_metadata[action_id][3]}
+            { "key": "sizeInMB", "value": str(actions_metadata[action_id][1])}, 
+            { "key": "timeInSeconds", "value": str(actions_metadata[action_id][2]) },
+            { "key": "uniqueRandomInput", "value": str(actions_metadata[action_id][3])}
         ]
         to_return_dict['actions'].append(action)
         
