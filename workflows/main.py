@@ -8,7 +8,6 @@ import json
 import sys
 import generator
 import networkx as nx
-import matplotlib.pyplot as plt
 import os
 
 def create_json_entry(workflow, actions_metadata, 
