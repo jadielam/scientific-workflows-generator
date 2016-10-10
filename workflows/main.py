@@ -32,6 +32,7 @@ def create_json_entry(workflow, actions_metadata,
         action['additionalInput'] = [
             { "key": "sizeInMB", "value": str(actions_metadata[action_id][1])}, 
             { "key": "timeInSeconds", "value": str(actions_metadata[action_id][2]) },
+            { "key": "nameNode", "value": conf['workflow']['nameNode']},
             { "key": "uniqueRandomInput", "value": str(actions_metadata[action_id][3])}
         ]
         to_return_dict['actions'].append(action)

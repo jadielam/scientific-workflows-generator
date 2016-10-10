@@ -28,8 +28,9 @@
 	"workflow": {
 		"name": "workflow",
 		"version": "1.0",
-		"main_class_name": "io.biblia.workflows.Example",
-		"action_folder": "/home/ubuntu/actionasf"
+		"main_class_name": "io.biblia.workflows.job.Main",
+		"action_folder": "/user/hadoop/examples/apps/scientific-workflows",
+		"nameNode": "hdfs://ec2-54-91-116-34.compute-1.amazonaws.com:8020"
 	},
 	"output_folder_path": "/Users/dearj019/Documents/workspace/scientific-workflows-examples"
 }
