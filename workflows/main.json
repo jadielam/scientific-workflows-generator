@@ -19,11 +19,11 @@
 	},
 	"nb_children": {
 		"mean": 2.1,
-		"std": 1
+		"std": 4.5
 	},
 	"nb_parent": {
 		"mean": 2.1,
-		"std": 1
+		"std": 4.5
 	},
 	"workflow": {
 		"name": "workflow",

@@ -9,6 +9,7 @@ import sys
 import generator
 import networkx as nx
 import os
+import matplotlib.pyplot as plt
 
 def create_json_entry(workflow, actions_metadata, 
                       start_action_id, end_action_id, conf):
@@ -53,6 +54,8 @@ def main():
     output_folder_path = conf['output_folder_path']
     actions_metadata = generator.actions(conf)
     workflows = generator.history(actions_metadata, conf)
+    nx.draw(workflows[0])
+    plt.show()
     workflows_json = []
     for workflow in workflows:
         t_sort = nx.algorithms.dag.topological_sort(workflow)
